@@ -1,0 +1,50 @@
+<div class="home-container">
+  <!-- Countdown Section -->
+  <div class="countdown-container" *ngIf="nextRace">
+    <h2 class="next-race-title">Next Race: {{ nextRace.grandPrix }}</h2>
+    <p class="countdown-text">{{ countdown }}</p>
+    <p class="next-race-details">
+      {{ nextRace.date }} | {{ nextRace.circuit }}, {{ nextRace.location }}
+    </p>
+  </div>
+
+  <!-- Race Cards Grid -->
+  <div class="grid-container">
+    <div *ngFor="let race of races" class="race-card">
+      <h2 class="grand-prix">{{ race.grandPrix }}</h2>
+
+      <p><strong>Date:</strong> {{ race.date }}</p>
+      <p><strong>Circuit:</strong> {{ race.circuit }}</p>
+      <p><strong>Location:</strong> {{ race.location }}</p>
+
+      <!-- Podium Selections -->
+      <div class="podium-container">
+        <h3 class="podium-title">Podium Picks</h3>
+
+        <div class="podium-position p1">
+          <div class="position-label">🥇 P1</div>
+          <select [(ngModel)]="getPodium(race.grandPrix).p1" class="driver-select">
+            <option value="">Select Driver</option>
+            <option *ngFor="let driver of drivers" [value]="driver">{{ driver }}</option>
+          </select>
+        </div>
+
+        <div class="podium-position p2">
+          <div class="position-label">🥈 P2</div>
+          <select [(ngModel)]="getPodium(race.grandPrix).p2" class="driver-select">
+            <option value="">Select Driver</option>
+            <option *ngFor="let driver of drivers" [value]="driver">{{ driver }}</option>
+          </select>
+        </div>
+
+        <div class="podium-position p3">
+          <div class="position-label">🥉 P3</div>
+          <select [(ngModel)]="getPodium(race.grandPrix).p3" class="driver-select">
+            <option value="">Select Driver</option>
+            <option *ngFor="let driver of drivers" [value]="driver">{{ driver }}</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,167 @@
+// Variables for color palette
+$warm-brown: #D4A373;
+$light-cream: #FAEDCD;
+$soft-yellow: #FEFAE0;
+$muted-green: #E9EDC9;
+$pastel-green: #CCD5AE;
+$dark-text: #333;
+$primary-accent: #174E4F;
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px;
+  background-color: $light-cream;
+  min-height: 100vh;
+  color: $dark-text;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+// Countdown Section
+.countdown-container {
+  background-color: $soft-yellow;
+  padding: 20px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+
+  .next-race-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: $primary-accent;
+    margin-bottom: 10px;
+  }
+
+  .countdown-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: $warm-brown;
+    margin-bottom: 8px;
+  }
+
+  .next-race-details {
+    font-size: 0.95rem;
+    color: #666;
+  }
+}
+
+// Race Cards Grid
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  justify-items: center;
+}
+
+// Race Card Styles
+.race-card {
+  background-color: $muted-green;
+  border-radius: 18px;
+  padding: 20px;
+  width: 100%;
+  max-width: 350px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  .grand-prix {
+    font-size: 1.6rem;
+    color: $primary-accent;
+    margin-bottom: 12px;
+  }
+
+  p {
+    margin: 4px 0;
+    font-size: 0.95rem;
+  }
+}
+
+// Podium Picks Container
+.podium-container {
+  margin-top: 16px;
+  background-color: $soft-yellow;
+  padding: 16px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .podium-title {
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: $primary-accent;
+  }
+
+  .podium-position {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 240px;
+    padding: 8px 12px;
+    margin-bottom: 12px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    border-left: 6px solid $warm-brown;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: #f9f9f9;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    &.p1 {
+      border-left-color: $warm-brown;
+    }
+
+    &.p2 {
+      border-left-color: $pastel-green;
+    }
+
+    &.p3 {
+      border-left-color: $muted-green;
+    }
+
+    .position-label {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: $dark-text;
+    }
+
+    .driver-select {
+      flex: 1;
+      margin-left: 12px;
+      padding: 6px 10px;
+      font-size: 0.9rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      background-color: #fafafa;
+      color: $dark-text;
+
+      &:focus {
+        outline: none;
+        border-color: $warm-brown;
+        background-color: #fff;
+      }
+    }
+  }
+}
+
+// Responsive tweaks for smaller screens
+@media (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .race-card {
+    max-width: 100%;
+  }
+}

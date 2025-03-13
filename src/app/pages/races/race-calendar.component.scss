@@ -1,0 +1,82 @@
+.races-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FEFAE0;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+  
+    .race-card {
+      width: 100%;
+      max-width: 400px;
+      background-color: #FAEDCD;
+      color: #333;
+      margin-bottom: 16px;
+      padding: 16px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s;
+      cursor: pointer;
+  
+      &:hover {
+        transform: translateY(-4px);
+      }
+  
+      h3 {
+        color: #D4A373;
+        margin-bottom: 10px;
+      }
+  
+      button {
+        margin-top: 10px;
+        background-color: #CCD5AE;
+        color: #333;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+  
+        &:hover {
+          background-color: #E9EDC9;
+        }
+      }
+    }
+  
+    .race-details {
+      margin-top: 20px;
+      padding: 16px;
+      background-color: #E9EDC9;
+      border-radius: 8px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  
+      h3 {
+        color: #D4A373;
+        margin-bottom: 10px;
+      }
+  
+      button {
+        margin-top: 10px;
+        background-color: #CCD5AE;
+        color: #333;
+        border: none;
+        padding: 8px 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+  
+        &:hover {
+          background-color: #FAEDCD;
+        }
+      }
+    }
+  }
+  

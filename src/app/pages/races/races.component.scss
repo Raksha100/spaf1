@@ -1,0 +1,42 @@
+.races-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FEFAE0; // Soft Yellow
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+h1 {
+  color: #D4A373; // Warm Brown
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.race-card {
+  width: 80%;
+  max-width: 600px;
+  background-color: #FAEDCD; // Light Cream
+  color: #174E4F; // Teal Forest
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: #174E4F; // Teal Forest
+  }
+
+  p {
+    font-size: 1rem;
+    color: #174E4F;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+}
