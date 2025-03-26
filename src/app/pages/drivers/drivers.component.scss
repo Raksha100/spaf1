@@ -1,32 +1,42 @@
 .drivers-container {
-  padding: 2rem;
   text-align: center;
-  background-color: #FAEDCD;
-}
-
-h1 {
-  color: #D4A373;
-  margin-bottom: 1.5rem;
 }
 
 .drivers-table {
   width: 100%;
   border-collapse: collapse;
-  background-color: #FEFAE0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
 }
 
 .drivers-table th, .drivers-table td {
-  padding: 1rem;
-  border-bottom: 1px solid #E9EDC9;
+  border: 1px solid #ddd;
+  padding: 10px;
 }
 
 .drivers-table th {
-  background-color: #CCD5AE;
-  color: #174E4F;
-  text-transform: uppercase;
+  background-color: #333;
+  color: white;
 }
 
-.drivers-table tr:hover {
-  background-color: #E9EDC9;
+.drivers-table tr:nth-child(even) {
+  background-color: #f3f3f3;
+}
+
+button {
+  margin: 2px;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
 }

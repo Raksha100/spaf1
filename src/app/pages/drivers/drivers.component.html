@@ -7,6 +7,7 @@
         <th>Driver</th>
         <th>Team</th>
         <th>Points</th>
+        <th>Actions</th>
       </tr>
     </thead>
     <tbody>
@@ -15,6 +16,12 @@
         <td>{{ driver.name }}</td>
         <td>{{ driver.team }}</td>
         <td>{{ driver.points }}</td>
+        <td>
+          <button (click)="updatePoints(driver, 10)">+10</button>
+          <button (click)="updatePoints(driver, 5)">+5</button>
+          <button (click)="updatePoints(driver, 1)">+1</button>
+          <button (click)="updatePoints(driver, -1)" [disabled]="driver.points <= 0">-1</button>
+        </td>
       </tr>
     </tbody>
   </table>

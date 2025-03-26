@@ -1,9 +1,12 @@
+<!-- Navigation Bar -->
 <nav class="navbar">
-  <a routerLink="/">Home</a>
-  <a routerLink="/races">Races</a>
-  <a routerLink="/drivers">Drivers</a>
+  <a routerLink="/home" routerLinkActive="active">Home</a>
+  <a routerLink="/races" routerLinkActive="active">Races</a>
+  <a routerLink="/drivers" routerLinkActive="active">Drivers</a>
+  <a routerLink="/login" routerLinkActive="active">Login</a>
 </nav>
 
+<!-- Routed Views -->
 <div class="container">
   <router-outlet></router-outlet>
 </div>

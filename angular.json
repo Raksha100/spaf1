@@ -19,7 +19,7 @@
           "options": {
             "outputPath": "dist/spaf1",
             "index": "src/index.html",
-            "browser": "src/main.ts",          
+            "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
@@ -54,13 +54,15 @@
               "optimization": true,
               "extractLicenses": true,
               "sourceMap": false,
-              "namedChunks": false
+              "namedChunks": false,
+              "baseHref": "/spaf1/"
             },
             "development": {
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true,
-              "namedChunks": true
+              "namedChunks": true,
+              "baseHref": "/"
             }
           },
           "defaultConfiguration": "production"

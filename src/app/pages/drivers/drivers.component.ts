@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   templateUrl: './drivers.component.html',
   styleUrls: ['./drivers.component.scss'],
-  imports: [CommonModule] // This allows *ngFor and other directives to work!
+  imports: [CommonModule] // Enables *ngFor
 })
 export class DriversComponent {
   driversStandings = [
@@ -31,4 +31,8 @@ export class DriversComponent {
     { position: 19, name: 'Yuki Tsunoda', team: 'Racing Bulls-Honda RBPT', points: 0 },
     { position: 20, name: 'Isack Hadjar', team: 'Racing Bulls-Honda RBPT', points: 0 }
   ];
+
+  updatePoints(driver: any, points: number) {
+    driver.points += points;
+  }
 }
